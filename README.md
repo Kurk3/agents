@@ -22,6 +22,14 @@ i let these run overnight (or in a background tab while i code), and every morni
 
 each file has three things: the **prompt** (copy-paste), the **claude slash-command**, and the **cron/launchd** schedule to fire it overnight.
 
+## more in here
+
+the overnight agents above run once. the rest of the repo is the workflow around them:
+
+- [loops/](loops/) — agents that run **again and again against a goal** in an isolated environment until a check passes. how i run agents in a loop, sandbox them in docker, and close the loop with playwright.
+- [habits/](habits/) — the daily practices around the tools. start with the [dev journal](habits/dev-journal.md).
+- [skills/](skills/) — single-purpose prompts i reuse, like [deload-brain](skills/deload-brain.md) for reading a codebase fast.
+
 ## run it overnight (3 moves)
 
 1. save it as a slash command → `~/.claude/commands/<name>.md`
